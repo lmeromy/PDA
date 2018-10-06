@@ -33,10 +33,11 @@ end
 end # don't need this last end
 
 def self.cards_total(cards)
-  total  # must actually initialize an empty array here!
+  total  # must actually initialize a count at zero
   for card in cards
-    total += card.value
-    return "You have a total of" + total #should be outside of for loop
+    card.value += total  # switch the order
+    return "You have a total of" + total  # need string interpolation
+     #should be outside of for loop
   end
 end
 

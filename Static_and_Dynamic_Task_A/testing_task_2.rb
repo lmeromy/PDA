@@ -24,19 +24,19 @@ class CardGame
 
   def highest_card(card1, card2)
     if card1.value > card2.value
-      return card1.suit + " of " + card1.value
+      return "#{card1.value} of #{card1.suit}"
     else
-      card2.suit + " of " + card2.value
+      "#{card2.value} of #{card2.suit}"
     end
   end
 
 
   def self.cards_total(cards)
-    total = []
+    total = 0
     for card in cards
       total += card.value
     end
-    return "You have a total of" + total
+    return "You have a total of #{total}"
   end
 
 
